@@ -1,0 +1,24 @@
+{
+  "name": "poopvr",
+  "version": "1.0.0",
+  "description": "Be like E.T. and phone throne",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhoneThrone/PoopVR.git"
+  },
+  "author": "Ian deBoisblanc, Elliot Plant, Shane McGraw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PhoneThrone/PoopVR/issues"
+  },
+  "homepage": "https://github.com/PhoneThrone/PoopVR#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "nodemon": "^1.9.2"
+  }
+}
