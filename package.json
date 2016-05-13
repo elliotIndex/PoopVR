@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/app.js"
+    "start": "nodemon server/app.js",
+    "build": "docker build -t poopvr .",
+    "deploy": "docker run -d -p 80:80 -e NODE_ENV='production' -e PORT=80 poopvr"
   },
   "repository": {
     "type": "git",
