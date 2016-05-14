@@ -1,5 +1,3 @@
 *.log
 node_modules/
-client/dist/index.html
-client/dist/index_bundle.js
-client/dist/index_bundle.js.map
+client/dist/i*
