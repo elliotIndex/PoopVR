@@ -13,7 +13,16 @@ class DinoScene extends React.Component {
         <a-asset-item id="stall" src="/assets/Toilet_Stall.dae" />
       </a-assets>
       <a-sky src='/assets/prehistoric.jpg'/>
-      <a-model src="/assets/dino.dae" position='10 0 10' rotation='0 90 0'></a-model>
+      <a-model src="/assets/dino.dae" position='10 0 10' rotation='0 90 0'>
+      <a-animation 
+          attribute='rotation'
+          dur='1000'
+          from='10 0 10'
+          to='0 10 100'
+          repeat='indefinite'
+        />
+      </a-model>
+
       <a-plane id='ground' src='/assets/ground.jpg' position='0 0 0' rotation='-90 0 0' width='70' height='50' />
       <a-entity position='0 1.5 0'>
         <a-camera id='camera' wasd-controls-enabled='false'/>
