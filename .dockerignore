@@ -1,4 +1,5 @@
-node_modules/
 *.log
-dist/*.js
-dist/*.html
+node_modules/
+client/dist/index.html
+client/dist/index_bundle.js
+client/dist/index_bundle.js.map
