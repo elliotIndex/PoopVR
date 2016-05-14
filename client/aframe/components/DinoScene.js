@@ -18,6 +18,11 @@ class DinoScene extends React.Component {
         <a-camera id='camera'/>
       </a-entity>
       <a-collada-model src='#asstronautDae' position='0 -0.5 0' rotation='0 180 0'/>
+
+      <a-entity>
+        <a-plane src='/assets/ptero.png' transparent='true' width='3' height='2' rotation='90 0 0' position='0 10 0'/>
+      </a-entity>
+
       </a-scene>
     );
   }
