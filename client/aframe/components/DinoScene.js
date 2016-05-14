@@ -8,6 +8,8 @@ class DinoScene extends React.Component {
   render () {
     return (
       <a-scene>
+      <a-sky color='blue'/>
+      <a-camera id='camera' position='0 1.3 0'/>
       </a-scene>
     );
   }
