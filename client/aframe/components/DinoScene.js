@@ -19,8 +19,15 @@ class DinoScene extends React.Component {
       </a-entity>
       <a-collada-model src='#asstronautDae' position='0 -0.5 0' rotation='0 180 0'/>
 
-      <a-entity>
-        <a-plane src='/assets/ptero.png' transparent='true' width='3' height='2' rotation='90 0 0' position='0 10 0'/>
+      <a-entity position='0 10 -10'>
+        <a-plane src='/assets/ptero.png' transparent='true' width='3' height='2' rotation='90 0 0'/>
+        <a-animation 
+          attribute='position'
+          dur='15000'
+          from='0 10 -100'
+          to='0 10 100'
+          repeat='indefinite'
+        />
       </a-entity>
 
       </a-scene>
