@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AFRAME from 'aframe';
 
-import MuseumScene from './aframe/components/DinoScene'
+import DinoScene from './aframe/components/DinoScene'
 
 ReactDOM.render(
   <div>
