@@ -1,4 +1,5 @@
 *.log
 node_modules/
-!dist/assets/
+!dist/
 dist/*
+!dist/assets/
