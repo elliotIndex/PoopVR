@@ -2,11 +2,13 @@ import React from 'react';
 import DinoScene from '../../aframe/components/DinoScene';
 import WarScene from '../../aframe/components/WarScene';
 import SharkScene from '../../aframe/components/SharkScene';
+import RollerCoasterScene from '../../aframe/components/RollerCoasterScene';
 
 const pooScenes = {
   war: WarScene,
   dino: DinoScene,
   shark: SharkScene,
+  coaster: RollerCoasterScene,
 }
 
 class PickYourPoo extends React.Component {
@@ -34,6 +36,7 @@ class PickYourPoo extends React.Component {
             <li onClick={() => this.loadPoo('war')}>World War Two</li>
             <li onClick={() => this.loadPoo('dino')}>Prehistoric Poo</li>
             <li onClick={() => this.loadPoo('shark')}>Shark Shit</li>
+            <li onClick={() => this.loadPoo('coaster')}>Throne Ride</li>
           </ul>
         </div>
       );
