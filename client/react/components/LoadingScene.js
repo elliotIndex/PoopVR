@@ -12,7 +12,7 @@ class LoadingScene extends React.Component {
     // load assets
     // when the assets load, bring in the component that was loading
     return (
-      <a-scene>
+      <a-entity>
         <a-entity position="0 3 5">
           {colors.map((color, index) => (
             <a-entity key={index} rotation={`0 ${index*360/5} 0`}>
@@ -34,7 +34,7 @@ class LoadingScene extends React.Component {
           />
         </a-entity>
         <a-sky color='skyblue' />
-      </a-scene>
+      </a-entity>
     );
   }
 };
