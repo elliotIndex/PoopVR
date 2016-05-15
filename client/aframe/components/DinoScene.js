@@ -7,11 +7,7 @@ class DinoScene extends React.Component {
 
   render () {
     return (
-      <a-scene>
-      <a-assets>
-        <a-asset-item id='stall' src='/assets/Toilet_Stall.dae' />
-        <a-asset-item id='fern' src='/assets/fern.dae' />
-      </a-assets>
+      <a-entity>
       <a-sky src='/assets/prehistoric.jpg'/>
 
       <a-entity position='0 0 0'>
@@ -30,7 +26,7 @@ class DinoScene extends React.Component {
 
       <a-plane id='ground' src='/assets/muddyGround.jpg' position='0 0 -3' rotation='-90 0 0' width='10' height='10' />
 
-      <a-entity position='0 1.5 0'> 
+      <a-entity position='0 1.5 0'>
         <a-camera id='camera' wasd-controls-enabled='true'/>
       </a-entity>
 
@@ -51,7 +47,7 @@ class DinoScene extends React.Component {
 
       <a-collada-model scale='2.3 1.2 1.6' src='#stall' position='1.2 0 1' rotation='0 180 0'/>
 
-      </a-scene>
+      </a-entity>
     );
   }
 };
