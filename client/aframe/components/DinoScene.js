@@ -24,7 +24,7 @@ class DinoScene extends React.Component {
                      repeat="indefinite"/>
       </a-entity>
 
-      <a-plane id='ground' src='/assets/ground.jpg' position='0 0 0' rotation='-90 0 0' width='70' height='50' />
+      <a-plane id='ground' src='/assets/ground.jpg' position='0 0 0' rotation='-90 0 0' width='25' height='25' />
       <a-entity position='0 1.5 0'>
         <a-camera id='camera' wasd-controls-enabled='false'/>
       </a-entity>
