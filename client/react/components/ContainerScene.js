@@ -10,11 +10,7 @@ class ContainerScene extends React.Component {
     };
   }
 
-  setLoaded() {
-    this.setState({
-      loading: false,
-    });
-  }
+
 
   componentDidMount() {
     var scene = document.querySelector('a-scene');
@@ -27,6 +23,11 @@ class ContainerScene extends React.Component {
   }
 
   render () {
+    this.setLoaded = () => {
+      this.setState({
+        loading: false,
+      });
+    }
     return (
       <a-scene>
         <a-assets>
