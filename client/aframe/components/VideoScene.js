@@ -1,7 +1,6 @@
 import React from 'react';
 
-class SharkScene
- extends React.Component {
+class VideoScene extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -11,9 +10,9 @@ class SharkScene
       <a-scene>
         <a-assets>
           <a-asset-item id="stall" src="/assets/Toilet_Stall.dae" />
-          <video id="sharks" autoplay loop="true" src="/assets/SharkShipwreck.mp4" />
+          <video id="video" autoplay loop="true" src={`/assets/${this.props.video}.mp4`} />
         </a-assets>
-         <a-videosphere src="#sharks" />
+        <a-videosphere src="#video" />
         <a-entity position='0 1.5 0'>
           <a-camera id='camera' wasd-controls-enabled='false'/>
         </a-entity>
@@ -23,5 +22,5 @@ class SharkScene
   }
 };
 
-module.exports = SharkScene
+module.exports = VideoScene
 ;
