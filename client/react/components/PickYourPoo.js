@@ -1,16 +1,12 @@
 import React from 'react';
 import DinoScene from '../../aframe/components/DinoScene';
 import WarScene from '../../aframe/components/WarScene';
-import SharkScene from '../../aframe/components/SharkScene';
 import VideoScene from '../../aframe/components/VideoScene';
-import RollerCoasterScene from '../../aframe/components/RollerCoasterScene';
 import MoonScene from '../../aframe/components/MoonScene';
 
 const pooScenes = {
   war: WarScene,
   dino: DinoScene,
-  shark: SharkScene,
-  coaster: RollerCoasterScene,
   moon: MoonScene,
 }
 
