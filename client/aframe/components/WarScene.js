@@ -51,6 +51,30 @@ class WarScene extends React.Component {
 
       <a-light type='ambient' color='#f6da80'></a-light>
 
+      <a-light type='point' color='#fff' intensity='0' position='-3 0.1 -15'>
+        <a-animation
+        begin='15000' 
+        attribute='intensity'
+        dur='500'
+        from='100'
+        to='0'
+        repeat='indefinite'
+        easing='ease-out'
+      />
+      </a-light>
+
+      <a-light type='point' color='#fff' intensity='0' position='1 5 5'>
+        <a-animation
+        begin='12000' 
+        attribute='intensity'
+        dur='500'
+        from='100'
+        to='0'
+        repeat='indefinite'
+        easing='ease-out'
+      />
+      </a-light>
+
       </a-scene>
     );
   }
