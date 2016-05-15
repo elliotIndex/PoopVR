@@ -29,13 +29,8 @@ class DinoScene extends React.Component {
         <a-camera id='camera' wasd-controls-enabled='false'/>
       </a-entity>
       <a-entity position='0 10 -10'>
-<<<<<<< HEAD
-        <a-plane src='/assets/ptero.png' transparent='true' width='3' height='2' rotation='90 0 0'/>
-        <a-animation 
-=======
         <a-plane src='/assets/ptero.png' sound="src: /assets/pter.mp3; autoplay: true; loop: true; volume: 10;" transparent='true' width='3' height='2' rotation='90 0 0'/>
         <a-animation
->>>>>>> 7f04869a155efcb90633b2d8e168a4e296aae5fa
           attribute='position'
           dur='15000'
           from='0 10 -100'
