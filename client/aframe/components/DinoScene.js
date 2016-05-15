@@ -9,7 +9,6 @@ class DinoScene extends React.Component {
     return (
       <a-scene>
       <a-assets>
-        <a-asset-item id='asstronautDae' src='/assets/John_glenn/model.dae' />
         <a-asset-item id='stall' src='/assets/Toilet_Stall.dae' />
         <a-asset-item id='fern' src='/assets/fern.dae' />
       </a-assets>
