@@ -1,5 +1,7 @@
 import React from 'react';
 
+const colors = ['#ee4035', '#f37736', '#fdf498', '#7bc043', '#0392cf'];
+
 class LoadingScene extends React.Component {
   constructor(props) {
     super(props);
@@ -11,23 +13,12 @@ class LoadingScene extends React.Component {
     // when the assets load, bring in the component that was loading
     return (
       <a-scene>
-        <a-entity>
-          <a-entity rotation={'0 ' + 1*360/5 + ' 0'}>
-            <a-sphere color='#ee4035' position='0 1 -5' />
-          </a-entity>
-          <a-entity rotation={'0 ' + 2*360/5 + ' 0'}>
-            <a-sphere color='#f37736' position='0 1 -5' />
-          </a-entity>
-          <a-entity rotation={'0 ' + 3*360/5 + ' 0'}>
-            <a-sphere color='#fdf498' position='0 1 -5' />
-          </a-entity>
-          <a-entity rotation={'0 ' + 4*360/5 + ' 0'}>
-            <a-sphere color='#7bc043' position='0 1 -5' />
-          </a-entity>
-          <a-entity rotation={'0 ' + 5*360/5 + ' 0'}>
-            <a-sphere color='#0392cf' position='0 1 -5' />
-          </a-entity>
-
+        <a-entity position="0 0 5">
+          {colors.map((color, index) => (
+            <a-entity key={index} rotation={`0 ${index*360/5} 0`}>
+              <a-sphere color={color} position='0 1 -5' />
+            </a-entity>
+          ))}
           <a-animation
             begin='100'
             attribute='rotation'
