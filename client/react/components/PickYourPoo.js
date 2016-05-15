@@ -17,14 +17,6 @@ class PickYourPoo extends React.Component {
     this.setState({ scene: pooScenes[poo] });
   }
 
-  loadWarPoo() {
-    this.loadPoo('war');
-  }
-
-  loadDinoPoo() {
-    this.loadPoo('dino');
-  }
-
   render () {
     if (this.state.scene) {
       return <this.state.scene />;
@@ -34,11 +26,11 @@ class PickYourPoo extends React.Component {
           <h1 class="title">PoopVR</h1>
           <i class="em em-poop"></i>
           <div class="status">
-            <p>Coming Soon!</p>
+            <p>Pick your Poo!</p>
           </div>
           <ul>
-            <li onClick={this.loadWarPoo}>World War Two</li>
-            <li onClick={this.loadDinoPoo}>Prehistoric Poo</li>
+            <li onClick={() => this.loadPoo('war')}>World War Two</li>
+            <li onClick={() => this.loadPoo('dino')}>Prehistoric Poo</li>
           </ul>
         </div>
       );
