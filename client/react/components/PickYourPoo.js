@@ -4,6 +4,7 @@ import WarScene from '../../aframe/components/WarScene';
 import MoonScene from '../../aframe/components/MoonScene';
 import VideoScene from '../../aframe/components/VideoScene';
 import LoadingScene from './LoadingScene';
+import ContainerScene from './ContainerScene';
 
 const pooScenes = {
   war: WarScene,
@@ -27,9 +28,15 @@ class PickYourPoo extends React.Component {
     });
   }
 
+  loadContainer(scene) {
+    this.setState({
+      scene: () => <ContainerScene scene={scene} />
+    });
+  }
+
   render () {
     if (this.state.scene) {
-      return <LoadingScene />;
+      return <this.state.scene />;
       // return <this.state.scene />;
     } else {
       return (
@@ -42,7 +49,7 @@ class PickYourPoo extends React.Component {
           <h3>Poop Scenes</h3>
           <ul>
             <li onClick={() => this.loadPoo('war')}>World War Two</li>
-            <li onClick={() => this.loadPoo('dino')}>Prehistoric Poo</li>
+            <li onClick={() => this.loadContainer('dino')}>Prehistoric Poo</li>
             <li onClick={() => this.loadPoo('moon')}>Lunar Poo</li>
           </ul>
           <h3>Theatrical Experiences</h3>
