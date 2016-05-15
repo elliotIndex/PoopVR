@@ -1,8 +1,9 @@
 import React from 'react';
 import DinoScene from '../../aframe/components/DinoScene';
 import WarScene from '../../aframe/components/WarScene';
-import VideoScene from '../../aframe/components/VideoScene';
 import MoonScene from '../../aframe/components/MoonScene';
+import VideoScene from '../../aframe/components/VideoScene';
+import LoadingScene from './LoadingScene';
 
 const pooScenes = {
   war: WarScene,
@@ -28,7 +29,8 @@ class PickYourPoo extends React.Component {
 
   render () {
     if (this.state.scene) {
-      return <this.state.scene />;
+      return <LoadingScene />;
+      // return <this.state.scene />;
     } else {
       return (
         <div>
