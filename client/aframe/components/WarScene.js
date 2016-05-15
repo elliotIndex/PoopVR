@@ -13,6 +13,9 @@ class WarScene extends React.Component {
         <a-asset-item id='fighterDae' src='/assets/fighterPlane/model.dae' />
         <a-asset-item id='stall' src='/assets/Toilet_Stall.dae' />
         <a-asset-item id='tallGrass' src='/assets/tallGrass.dae' />
+        <audio id='siren' src='assets/siren.mp3' />
+        <audio id='planeSound' src='assets/planeSound.mp3' />
+        <audio id='battle' src='assets/battle.mp3' />
       </a-assets>
 
       <a-sky src='/assets/gloomySky.jpg' rotation='60 0 0' />
@@ -25,7 +28,8 @@ class WarScene extends React.Component {
       </a-entity>
 
       <a-entity position='-47 25 0' rotation='0 180 0'>
-        <a-collada-model src='#fighterDae' position='65 2 0' rotation='10 0 26'/>
+        <a-collada-model sound='src:assets/planeSound.mp3; autoplay:true; loop:true; volume:10;' 
+          src='#fighterDae' position='65 2 0' rotation='10 0 26'/>
         <a-collada-model src='#fighterDae' position='45 0 0' rotation='10 0 20'/>
         <a-animation
           begin='5000' 
@@ -38,7 +42,8 @@ class WarScene extends React.Component {
         />
       </a-entity>
 
-      <a-entity id='siren' position='10 3 -15' sound='src:assets/siren.mp3;autoplay:true;loop:true;' />
+      <a-entity id='siren' position='30 3 -25' sound='src:assets/siren.mp3; autoplay:true; loop:true;' />
+      <a-entity id='battle' position='-10 2 -5' sound='src:assets/battle.mp3; autoplay:true; loop:true;' />
 
       <a-collada-model scale='2.3 1.5 2' src='#tallGrass' position='-1.5 -0.8 -1.5' />
 
