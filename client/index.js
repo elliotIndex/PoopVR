@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AFRAME from 'aframe';
 
-import DinoScene from './aframe/components/DinoScene'
-import WarScene from './aframe/components/WarScene'
+import PickYourPoo from './react/components/PickYourPoo'
 
 ReactDOM.render(
   <div>
-    <WarScene/>
+    <PickYourPoo/>
   </div>
 , document.getElementById('app'));
