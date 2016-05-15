@@ -13,12 +13,12 @@ class DinoScene extends React.Component {
         <a-asset-item id="stall" src="/assets/Toilet_Stall.dae" />
       </a-assets>
       <a-sky src='/assets/prehistoric.jpg'/>
-      <a-entity>
-        <a-model src="/assets/dino.dae" position='0 0 0' rotation='0 90 0'>
-        
-        </a-model>
+      <a-entity position="0 0 0">
+
+          <a-model src="/assets/dino.dae" position='35 12 0' rotation='0 90 0'>
+          </a-model>
         <a-animation attribute="rotation"
-                     dur="10000"
+                     dur="9000"
                      fill="forwards"
                      to="0 360 0"
                      repeat="indefinite"/>
@@ -40,6 +40,7 @@ class DinoScene extends React.Component {
           repeat='indefinite'
         />
       </a-entity>
+
       <a-collada-model scale="2.3 1.5 2" src='#stall' position='1.2 0 1' rotation='0 180 0'/>
 
       </a-scene>
