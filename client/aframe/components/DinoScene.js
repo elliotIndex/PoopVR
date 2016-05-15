@@ -13,26 +13,29 @@ class DinoScene extends React.Component {
         <a-asset-item id="stall" src="/assets/Toilet_Stall.dae" />
       </a-assets>
       <a-sky src='/assets/prehistoric.jpg'/>
-      <a-entity>
-        <a-model src="/assets/dino.dae" position='0 0 0' rotation='0 90 0'>
-        
-        </a-model>
+      <a-entity position="0 0 0">
+
+          <a-model src="/assets/dino.dae" sound="src: /assets/trex.mp3; autoplay: true; volume: 1;" position='35 12 0' rotation='0 90 0'>
+          </a-model>
         <a-animation attribute="rotation"
-                     dur="10000"
+                     dur="9000"
                      fill="forwards"
                      to="0 360 0"
                      repeat="indefinite"/>
       </a-entity>
 
-      <a-plane id='ground' src='/assets/ground.jpg' position='0 0 0' rotation='-90 0 0' width='70' height='50' />
+      <a-plane id='ground' src='/assets/ground.jpg' position='0 0 0' rotation='-90 0 0' width='25' height='25' />
       <a-entity position='0 1.5 0'>
         <a-camera id='camera' wasd-controls-enabled='false'/>
       </a-entity>
-      {/*<a-collada-model src='#asstronautDae' position='0 -0.5 0' rotation='0 180 0'/>*/}
-
       <a-entity position='0 10 -10'>
+<<<<<<< HEAD
         <a-plane src='/assets/ptero.png' transparent='true' width='3' height='2' rotation='90 0 0'/>
         <a-animation 
+=======
+        <a-plane src='/assets/ptero.png' sound="src: /assets/pter.mp3; autoplay: true; loop: true; volume: 10;" transparent='true' width='3' height='2' rotation='90 0 0'/>
+        <a-animation
+>>>>>>> 7f04869a155efcb90633b2d8e168a4e296aae5fa
           attribute='position'
           dur='15000'
           from='0 10 -100'
@@ -40,8 +43,7 @@ class DinoScene extends React.Component {
           repeat='indefinite'
         />
       </a-entity>
-      <a-collada-model scale="2.3 1.5 2" src='#stall' position='1.2 0 1' rotation='0 180 0'/>
-
+      <a-collada-model scale="2.3 1.2 1.6" src='#stall' position='1.2 0 1' rotation='0 180 0'/>
       </a-scene>
     );
   }
