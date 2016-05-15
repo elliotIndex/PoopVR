@@ -15,7 +15,7 @@ class DinoScene extends React.Component {
       <a-sky src='/assets/prehistoric.jpg'/>
       <a-entity position="0 0 0">
 
-          <a-model src="/assets/dino.dae" sound="src: /assets/trex.mp3; autoplay: true; volume: 1;" position='35 12 0' rotation='0 90 0'>
+          <a-model src="/assets/dino.dae" sound="src: /assets/trex.mp3; loop: true; autoplay: true; volume: 10;" position='35 12 0' rotation='0 90 0'>
           </a-model>
         <a-animation attribute="rotation"
                      dur="9000"
