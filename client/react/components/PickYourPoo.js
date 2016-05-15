@@ -1,10 +1,12 @@
 import React from 'react';
 import DinoScene from '../../aframe/components/DinoScene';
 import WarScene from '../../aframe/components/WarScene';
+import MoonScene from '../../aframe/components/MoonScene';
 
 const pooScenes = {
   war: WarScene,
   dino: DinoScene,
+  moon: MoonScene,
 }
 
 class PickYourPoo extends React.Component {
@@ -31,6 +33,7 @@ class PickYourPoo extends React.Component {
           <ul>
             <li onClick={() => this.loadPoo('war')}>World War Two</li>
             <li onClick={() => this.loadPoo('dino')}>Prehistoric Poo</li>
+            <li onClick={() => this.loadPoo('moon')}>Lunar Poo</li>
           </ul>
         </div>
       );
