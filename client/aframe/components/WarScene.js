@@ -12,6 +12,7 @@ class WarScene extends React.Component {
       <a-assets>
         <a-asset-item id="fighterDae" src="/assets/fighterPlane/model.dae" />
         <a-asset-item id="stall" src="/assets/Toilet_Stall.dae" />
+        <a-asset-item id="tallGrass" src="/assets/tallGrass.dae" />
       </a-assets>
 
       <a-sky src='/assets/gloomySky.jpg' rotation='60 0 0' />
@@ -36,6 +37,8 @@ class WarScene extends React.Component {
           easing='linear'
         />
       </a-entity>
+
+      <a-collada-model scale="2.3 1.5 2" src='#tallGrass' position='-1.5 -0.8 -1.5' />
 
       <a-collada-model scale="2.3 1.5 2" src='#stall' position='1.2 0 1' rotation='0 180 0'/>
 
